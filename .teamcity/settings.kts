@@ -64,8 +64,6 @@ object Build : BuildType({
             scriptContent = """
                 #!/usr/bin/env bash
                 ls
-                chmod +x gradlew
-                gradlew build
             """.trimIndent()
             dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
             dockerImage = "dockerhub.wfgmb.com/gradle:latest"
