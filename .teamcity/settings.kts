@@ -57,7 +57,7 @@ object Build : BuildType({
 
     steps {
         script {
-            name = "Analyze"
+            name = "Debug"
             scriptContent = """
                 #!/usr/bin/env bash
                 ls
