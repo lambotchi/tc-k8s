@@ -64,6 +64,7 @@ object Build : BuildType({
             scriptContent = """
                 #!/usr/bin/env bash
                 echo "one"
+                pwd
                 ls
                 echo "two"
             """.trimIndent()
