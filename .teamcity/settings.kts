@@ -73,6 +73,7 @@ object Build : BuildType({
         }
         gradle {
             name = "Gradle build"
+            enabled = false
             tasks = "build"
             useGradleWrapper = false
             dockerImagePlatform = GradleBuildStep.ImagePlatform.Linux
