@@ -61,7 +61,6 @@ object Build : BuildType({
             useGradleWrapper = false
             dockerImagePlatform = GradleBuildStep.ImagePlatform.Linux
             dockerImage = "dockerhub.wfgmb.com/gradle:latest"
-            dockerRunParameters = "-D"
         }
     }
 
