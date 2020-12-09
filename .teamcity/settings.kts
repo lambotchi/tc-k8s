@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.*
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.dockerSupport
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.GradleBuildStep
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.gradle
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.v2019_2.vcs.GitVcsRoot
@@ -61,6 +62,13 @@ object Build : BuildType({
             useGradleWrapper = false
             dockerImagePlatform = GradleBuildStep.ImagePlatform.Linux
             dockerImage = "dockerhub.wfgmb.com/gradle:latest"
+        }
+        script {
+            name = "Debug"
+            scriptContent = """
+                #!/usr/bin/env bash
+                ls
+            """.trimIndent()
         }
     }
 
