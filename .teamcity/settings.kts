@@ -64,7 +64,7 @@ object Build : BuildType({
             dockerImage = "dockerhub.wfgmb.com/gradle:latest"
         }
         script {
-            name = "Debug"
+            name = "Analyze"
             scriptContent = """
                 #!/usr/bin/env bash
                 ls
