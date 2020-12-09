@@ -56,19 +56,19 @@ object Build : BuildType({
     }
 
     steps {
-        gradle {
-            name = "Gradle build"
-            tasks = "build"
-            useGradleWrapper = false
-            dockerImagePlatform = GradleBuildStep.ImagePlatform.Linux
-            dockerImage = "dockerhub.wfgmb.com/gradle:latest"
-        }
         script {
             name = "Analyze"
             scriptContent = """
                 #!/usr/bin/env bash
                 ls
             """.trimIndent()
+        }
+        gradle {
+            name = "Gradle build"
+            tasks = "build"
+            useGradleWrapper = false
+            dockerImagePlatform = GradleBuildStep.ImagePlatform.Linux
+            dockerImage = "dockerhub.wfgmb.com/gradle:latest"
         }
     }
 
