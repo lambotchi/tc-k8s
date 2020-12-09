@@ -63,7 +63,9 @@ object Build : BuildType({
             name = "Debug"
             scriptContent = """
                 #!/usr/bin/env bash
+                echo "one"
                 ls
+                echo "two"
             """.trimIndent()
             dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
             dockerImage = "dockerhub.wfgmb.com/gradle:latest"
