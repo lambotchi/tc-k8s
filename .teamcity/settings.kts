@@ -70,7 +70,7 @@ object Build : BuildType({
             """.trimIndent()
             dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
             dockerImage = "dockerhub.wfgmb.com/gradle:latest"
-            dockerRunParameters = "-v %teamcity.build.checkoutDir%:/"
+            dockerRunParameters = "-v %teamcity.build.checkoutDir%:%teamcity.build.checkoutDir%"
         }
         gradle {
             name = "Gradle build"
