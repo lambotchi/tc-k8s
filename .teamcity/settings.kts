@@ -55,6 +55,13 @@ object Build : BuildType({
     }
 
     steps {
+        script {
+            name = "Test 1"
+            scriptContent = """
+                #!/usr/bin/env bash
+                ls
+            """.trimIndent()
+        }
         gradle {
             name = "Gradle build"
             tasks = "build"
