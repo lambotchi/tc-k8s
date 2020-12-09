@@ -61,6 +61,7 @@ object Build : BuildType({
             scriptContent = """
                 #!/usr/bin/env bash
                 ls
+                ./gradlew build
             """.trimIndent()
         }
         gradle {
