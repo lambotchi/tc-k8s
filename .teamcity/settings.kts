@@ -65,8 +65,6 @@ object Build : BuildType({
                 ls
                 ./gradlew build
             """.trimIndent()
-            dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
-            dockerImage = "dockerhub.wfgmb.com/gradle:latest"
         }
         gradle {
             name = "Gradle build"
