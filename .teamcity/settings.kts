@@ -61,7 +61,6 @@ object Build : BuildType({
     steps {
         script {
             name = "Debug"
-            enabled = false
             scriptContent = """
                 #!/usr/bin/env bash
                 echo "one"
