@@ -51,6 +51,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "build/libs/*.jar"
+
     vcs {
         root(HttpsGithubComLambotchiSpringBootRest1refsHeadsMaster)
     }
