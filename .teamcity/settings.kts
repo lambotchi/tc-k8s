@@ -66,6 +66,7 @@ object Build : BuildType({
                 echo "one"
                 pwd
                 ls
+                ./gradlew clean build
                 echo "two"
             """.trimIndent()
             dockerImagePlatform = ScriptBuildStep.ImagePlatform.Linux
